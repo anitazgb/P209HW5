@@ -4,18 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>My Books</title>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    
     <script src="main.js"></script>
-  
+    <link rel="stylesheet" type="text/css" href="index.css">
 
-
-    <title>Notes</title>
 </head>
 <body>
-    <h1>HELLO</h1>
+    <!--Start of page---------------------------------------------------------------------------->
+    <div data-role="page" id="home">
+
+        <!--Page header-->
+        <div data-role="header" data-theme='a'>
+            <h1>My Books</h1>
+            <div data-role="navbar" data-theme='b'>  <!--navbar-->
+                <ul>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#Load">Add Book</a></li>
+                    <li><a href="#ListAll">List Books</a></li>
+                </ul>
+            </div> <!--End navbar-->
+
+        </div> <!--End page header-->
+
+        <!--Page content-->
+        <div data-role="content" data-theme="b">
+            <div class="newFont">
+                <h2>Library of E-Books Collection</h2>
+            </div>
+        </div> <!--End of page content-->
+
+        <!--Page footer-->
+        <div data-role="footer" data-theme='b'>
+            <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1>
+        </div> <!--End page footer-->
+    </div> <!--End of page ----------------------------------------------------------------------->
+
+    <!--Start of page---------------------------------------------------------------------------->
+    <div data-role="page" id="dateils">
+        <!--Page header-->
+        <div data-role="header" data-theme='a'>
+            <h1>Book details</h1>
+            <div data-role="navbar" data-theme='b'>  <!--navbar-->
+                <ul>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#Load">Add Book</a></li>
+                    <li><a href="#ListAll">List Books</a></li>
+                </ul>
+            </div> <!--End navbar-->
+        </div>
+        <!--Page content-->
+        <div data-role="content" data-theme='c'></div>
+        <!--Page footer-->
+        <div data-role="footer" data-theme='b'>
+            <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1> <!--End page footer-->
+        </div>
+    </div> <!--End of page ----------------------------------------------------------------------->
+
 </body>
 </html>
