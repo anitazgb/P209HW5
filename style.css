@@ -1,7 +1,7 @@
-/* Set a background color for the body, and do not allow to scroll a page */
+/* Set a background color for the body, and allow to scroll a page */
 body {
     background-color: #f2f2f2;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* Style the image on Home page */
@@ -24,7 +24,7 @@ img {
     color: white;
     padding: 10px;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }

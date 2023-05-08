@@ -11,7 +11,9 @@ let BookObject = function (pTitle, pYear, pGenre, pAuthor, pCountry) {
     this.ID = Math.random().toString(16).slice(5)   //bookArray.length + 1;
 }
 
-bookArray.push(new BookObject());
+bookArray.push(new BookObject("HTML & CSS", 2011, "Nonfiction", "Jon Duckett", "United States"));
+bookArray.push(new BookObject("JavaScript & jQuery", 2014, "Nonfiction", "Jon Duckett", "United States"));
+bookArray.push(new BookObject("The Miracle Morning", 2017, "Action", "Hal Elrod", "United States"));
 
 let selectGenre = "";
 
@@ -24,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
         selectGenre,
         document.getElementById("year").value,
         document.getElementById("author").value,
-        bookArray.length,
         document.getElementById("country").value));
         document.location.href = "index.html#ListAll";
     });
+
     document.getElementById("buttonClear").addEventListener('click', function () {
         document.getElementById("title").value = "";
         document.getElementById("year").value = "";
@@ -62,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let pointer = GetArrayPointer(localID);
 
         document.getElementById("oneTitle").innerHTML = "The book name is: " + bookArray[pointer].Title;
-        document.getElementById("oneYear").innerHTML = "The date of book been released" + bookArray[pointer].Year;
-        document.getElementById("oneGenre").innerHTML = "The genre of book is " + bookArray[pointer].Genre;
-        document.getElementById("oneAuthor").innerHTML = "The author of the book is " + bookArray[pointer].Author;
-        document.getElementById("oneCountry").innerHTML = "The counry where book been written is " + bookArray[pointer].Country;
+        document.getElementById("oneYear").innerHTML = "The date of book been released: " + bookArray[pointer].Year;
+        document.getElementById("oneGenre").innerHTML = "The genre of book is: " + bookArray[pointer].Genre;
+        document.getElementById("oneAuthor").innerHTML = "The author of the book is: " + bookArray[pointer].Author;
+        document.getElementById("oneCountry").innerHTML = "The counry where book been written is: " + bookArray[pointer].Country;
     });
 });   //End of DOMContentLoaded
 
@@ -74,11 +76,11 @@ function createList () {
     let myUL = document.getElementById("BookListUl");
     myUL.innerHTML = "";
 
-    bookArray.forEach(function (book,) {
+    bookArray.forEach(function (book, index) {
         var myLi = document.createElement('li');
         myLi.classList.add('book');
         myLi.setAttribute("data-parm", book.ID);
-        myLi.innerHTML = book.ID + ": " + book.Title + " " + book.Genre + " " + book.Year;
+        myLi.innerHTML = index + 1 + ": " + book.Title + " " + book.Author + " " + book.Year + " " + book.Genre;
         myUL.appendChild(myLi);
     });
 
