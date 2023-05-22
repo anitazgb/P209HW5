@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Denis Martynov & Hanna Kavaleva">
     <title>My Books</title>
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="main.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
+
 <body>
     <!--Start of page #1---------------------------------------------------------------------------->
     <div data-role="page" id="home">
@@ -20,7 +23,7 @@
         <!--Page header-->
         <div data-role="header" data-theme='a'>
             <h1>My Books</h1>
-            <div data-role="navbar" data-theme='b'>  <!--navbar-->
+            <div data-role="navbar" data-theme='a'> <!--navbar-->
                 <ul>
                     <li><a href="#home">Home Page</a></li>
                     <li><a href="#Load">Add Book</a></li>
@@ -39,7 +42,7 @@
         </div> <!--End of page content-->
 
         <!--Page footer-->
-        <div data-role="footer" data-theme='b'>
+        <div data-role="footer" data-theme='a'>
             <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1>
         </div> <!--End page footer-->
     </div> <!--End of page ----------------------------------------------------------------------->
@@ -49,7 +52,7 @@
         <!--Page header-->
         <div data-role="header" data-theme='a'>
             <h1>Book details</h1>
-            <div data-role="navbar" data-theme='b'>  <!--navbar-->
+            <div data-role="navbar" data-theme='a'> <!--navbar-->
                 <ul>
                     <li><a href="#home">Home Page</a></li>
                     <li><a href="#Load">Add Book</a></li>
@@ -58,7 +61,7 @@
             </div> <!--End navbar-->
         </div>
         <!--Page content-->
-        <div data-role="content" data-theme='c'>
+        <div data-role="content" data-theme='a'>
             <p>Book details</p>
             <p id="oneTitle"></p>
             <p id="oneYear"></p>
@@ -68,10 +71,10 @@
             <!--<img src="images/htmlcssbook.png" alt="HTML and CSS by Jon Duckett" class="book-image">  -->
             <!--<input type="button" value="Trailer" id="trailer" />   -->
         </div> <!--End of page content-->
-       
+
         <!--Page footer-->
-        <div data-role="footer" data-theme='b'>
-            <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1> 
+        <div data-role="footer" data-theme='a'>
+            <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1>
         </div> <!--End page footer-->
     </div> <!--End of page ----------------------------------------------------------------------->
 
@@ -80,7 +83,7 @@
         <!--Page header-->
         <div data-role="header" data-theme='a'>
             <h1>Book details</h1>
-            <div data-role="navbar" data-theme='b'>  <!--navbar-->
+            <div data-role="navbar" data-theme='a'> <!--navbar-->
                 <ul>
                     <li><a href="#home">Home Page</a></li>
                     <li><a href="#Load">Add Book</a></li>
@@ -89,7 +92,7 @@
             </div> <!--End navbar-->
         </div>
         <!--Page content-->
-        <div data-role="content" data-theme='c'>
+        <div data-role="content" data-theme='a'>
             <h2>Enter a new Book</h2>
             Enter book name:<br>
             <input type="text" value="" id="title" />
@@ -99,7 +102,7 @@
             <input type="text" value="" id="author" />
             Enter country:<br>
             <input type="text" value="" id="country" />
-        
+
             <div class="ui-field-contain">
                 Select a Book Genre<br>
                 <select name="select-genre" id="select-genre">
@@ -121,8 +124,8 @@
             <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
         </div> <!--End of page content-->
         <!--Page footer-->
-        <div data-role="footer" data-theme='b'>
-            <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1> 
+        <div data-role="footer" data-theme='a'>
+            <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1>
         </div> <!--End page footer-->
     </div>
     <!--Start of page #4---------------------------------------------------------------------------->
@@ -131,7 +134,7 @@
         <!--Page header-->
         <div data-role="header" data-theme='a'>
             <h1>Book details</h1>
-            <div data-role="navbar" data-theme='b'>  <!--navbar-->
+            <div data-role="navbar" data-theme='a'> <!--navbar-->
                 <ul>
                     <li><a href="#home">Home Page</a></li>
                     <li><a href="#Load">Add Book</a></li>
@@ -141,7 +144,7 @@
         </div>
 
         <!--Page content-->
-        <div data-role="content" data-theme='e'>
+        <div data-role="content" data-theme='a'>
             <h2>List of All Books:</h2>
             <div>
                 <ul id="BookListUl"></ul>
@@ -151,10 +154,11 @@
         </div> <!--End of page content-->
 
         <!--Page footer-->
-        <div data-role="footer" data-theme='b'>
-            <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1> 
+        <div data-role="footer" data-theme='a'>
+            <h1>Copyright 2023 by Denis Martynov & Hanna Kavaleva</h1>
         </div> <!--End page footer-->
 
     </div> <!--End of page ----------------------------------------------------------------------->
 </body>
+
 </html>

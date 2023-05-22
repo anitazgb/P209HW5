@@ -5,8 +5,8 @@ let bookArray = [];
 let BookObject = function (pTitle, pYear, pGenre, pAuthor, pCountry) {
     this.Title = pTitle;
     this.Year = pYear;
-    this.Genre = pGenre; 
-    this.Author = pAuthor; 
+    this.Genre = pGenre;
+    this.Author = pAuthor;
     this.Country = pCountry;
     this.ID = Math.random().toString(16).slice(5)   //bookArray.length + 1;
 }
@@ -17,16 +17,16 @@ bookArray.push(new BookObject("The Miracle Morning", 2017, "Action", "Hal Elrod"
 
 let selectGenre = "";
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     createList();
 
     //add buttons events
     document.getElementById('buttonAdd').addEventListener('click', function () {
         bookArray.push(new BookObject(document.getElementById("title").value,
-        selectGenre,
-        document.getElementById("year").value,
-        document.getElementById("author").value,
-        document.getElementById("country").value));
+            selectGenre,
+            document.getElementById("year").value,
+            document.getElementById("author").value,
+            document.getElementById("country").value));
         document.location.href = "index.html#ListAll";
     });
 
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });   //End of DOMContentLoaded
 
-function createList () {
+function createList() {
     //clear prior data
     let myUL = document.getElementById("BookListUl");
     myUL.innerHTML = "";
@@ -80,14 +80,14 @@ function createList () {
         var myLi = document.createElement('li');
         myLi.classList.add('book');
         myLi.setAttribute("data-parm", book.ID);
-        myLi.innerHTML = index + 1 + ": " + book.Title + " " + book.Author + " " + book.Year + " " + book.Genre;
+        myLi.innerHTML = index + 1 + ": " + book.Title + " " + book.Author + " " + book.Genre;
         myUL.appendChild(myLi);
     });
 
     //display out list
     var liList = document.getElementsByClassName('book')
     let newBookArray = Array.from(liList);
-    newBookArray.forEach(function(element) {
+    newBookArray.forEach(function (element) {
         element.addEventListener('click', function () {
             var parm = this.getAttribute("data-parm");
             localStorage.setItem('parm', parm);
@@ -100,23 +100,23 @@ function createList () {
 };
 
 function dynamicSort(property) {
-    var sortOrder =1;
-    if (property[0]==="-"){
+    var sortOrder = 1;
+    if (property[0] === "-") {
         sortOrder = -1;
         property = property.substr(1);
     }
     return function (a, b) {
         if (sortOrder == -1) {
             return b[property].localeCompare(a[property]);
-        }else {
-            return a[property].localeCompare(b[property]); 
+        } else {
+            return a[property].localeCompare(b[property]);
         }
     }
 }
 
-function GetArrayPointer (localID) {
-    for (let i=0; i < bookArray.length; i++) {
-        if (localID === bookArray[i].ID){
+function GetArrayPointer(localID) {
+    for (let i = 0; i < bookArray.length; i++) {
+        if (localID === bookArray[i].ID) {
             return i;
         }
     }
